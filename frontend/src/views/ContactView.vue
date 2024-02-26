@@ -1,6 +1,5 @@
 <template>
     <div class="View">
-        <br><br><br>
         <h1>Contact Us</h1>
 
         <div class="row" id="left">
@@ -196,16 +195,16 @@ export default{
       box-shadow: 0 0 20px floralwhite;
     }
     button{
-      background-color: #6ae856;
+      background-color: #000000;
       color: floralwhite;
       height: 55px;
       border-radius: 10px;
     }
     button:hover{
       transform: scale(1.05);
-      box-shadow: inset 0 -3em 3em #24ff02,
-      0 0 0 2px floralwhite,
-      0em 0em 1em #24ff02;
+      box-shadow: inset 0 -3em 3em #ffffff,
+      0 0 0 2px rgb(0, 0, 0),
+      0em 0em 1em #000000;
     }
     form{
       margin-left: 2%;

@@ -47,7 +47,20 @@ export default {
   padding-bottom: 5%;
   padding-top: 16%;
 }
+h1{
+  font-size: 52px;
+}
 
+@media screen and (max-width:1080px){
+  .home{
+    background-size: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home{
+    background-size: auto;
+  }
+}
 @media screen and (max-width:720px){
   .home{
     padding-bottom: 0%;

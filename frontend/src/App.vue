@@ -29,7 +29,7 @@ export default{
   text-align: left;
   color: black;
   background-color: white;
-  background-image: url("");
+  /* background-image: url(""); */
   background-repeat: repeat-y;
   background-size: 1550px;
   background-attachment: fixed;
@@ -41,4 +41,5 @@ export default{
 #app::before{
   opacity: 0.75;
 }
+
 </style>

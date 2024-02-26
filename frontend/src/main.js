@@ -7,6 +7,8 @@ import axios from 'axios'
 
 createApp(App).use(store).use(router).mount('#app')
 
+App.component('slot-comp', SlotComp)
+
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap/dist/js/bootstrap.js"
 import 'bootstrap-icons/font/bootstrap-icons.css'
