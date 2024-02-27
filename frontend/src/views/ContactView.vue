@@ -182,6 +182,7 @@ export default{
     h1{
       margin-top: 55px;
       padding-top: 50px;
+      font-weight: bold;
     }
     h1, h2, h3{
       text-align: initial;

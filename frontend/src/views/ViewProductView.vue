@@ -86,6 +86,9 @@ export default{
 img{
   width: 550px;
 }
+h1{
+  font-weight: bold;
+}
 
 .vr{
   width: 1px;

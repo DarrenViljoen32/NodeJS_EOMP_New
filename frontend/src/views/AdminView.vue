@@ -3,11 +3,69 @@
         <br><br><br>
         <h1>Administration</h1>
 
-        <button>Sort</button>
+        <button class="outsideButtons">Sort</button>
         <br><br>
         <h2>Products</h2>
-        <button>Add Product</button>
         <br><br>
+        <button class="outsideButtons" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product</button>
+        <br><br>
+
+
+        <!-- Add Products Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Products</h5>
+                <a class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+              </div>
+              <div class="modal-body">
+                <input type="text" name="prodName" id="prodName" placeholder="Name" v-model="prodName">
+                <br><br>
+                <input type="text" name="amount" id="amount" placeholder="Amount" v-model="amount">
+                <br><br>
+                <input type="text" name="Category" id="Category" placeholder="Category" v-model="Category">
+                <br><br>
+                <input type="text" name="prodUrl" id="prodUrl" placeholder="Image Url" v-model="prodUrl">
+                <br><br>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-bs-dismiss="modal">Close</button>
+                <button type="button" @click="addProduct">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Edit Products Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+                <a class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+              </div>
+              <div class="modal-body">
+                <input type="text" name="prodName" id="prodName" placeholder="Name" v-model="prodName">
+                <br><br>
+                <input type="text" name="amount" id="amount" placeholder="Amount" v-model="amount">
+                <br><br>
+                <input type="text" name="Category" id="Category" placeholder="Category" v-model="Category">
+                <br><br>
+                <input type="text" name="prodUrl" id="prodUrl" placeholder="Image Url" v-model="prodUrl">
+                <br><br>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-bs-dismiss="modal">Close</button>
+                <button type="button" @click="editProduct">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
         <table class="table">
 
           <thead>
@@ -21,94 +79,29 @@
               <th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody v-for="item in $store.state.products" :key="item">
             <tr>
-              <th scope="row">1</th>
+              <td>{{ item.prodID }}</td>
+              <td>{{ item.prodName }}</td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>R{{ item.amount }}</td>
+              <td>{{ item.Category }}</td>
+              <td><img v-bind:src= "item.prodUrl" alt="productImage"></td>
               <td>
-                <button>Edit</button>
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
                 <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">6</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
+                <button @click="deleteItem(item.prodID)">Delete</button>
               </td>
             </tr>
           </tbody>
-
         </table>
 
         <br><br><br>
 
         <h2>Users</h2>
-        <button>Add User</button>
+        <button class="outsideButtons">Add User</button>
         <br><br>
+        
         <table class="table">
 
           <thead>
@@ -142,86 +135,6 @@
                 <button>Delete</button>
               </td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>              
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">6</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button>Edit</button>
-                <br><br>
-                <button>Delete</button>
-              </td>
-            </tr>
           </tbody>
 
         </table>
@@ -232,6 +145,47 @@
 import Spinner from '@/components/Spinner.vue'
 
 export default{
+  data(){
+    return{
+      prodID: null,
+      prodName: null,
+      amount: null,
+      Category: null,
+      prodUrl: null,
+      showModal: false
+    }
+  },
+  computed:{
+    getProduct(){
+      this.$store.dispatch('getProduct')
+    }
+  },
+  methods:{
+    addProduct(){
+      console.log(this.$data);
+      this.$store.dispatch('getPost', this.$data)
+    },
+    deleteItem(prodName){
+      this.$store.dispatch('deleteItem', prodName)
+    },
+    editProduct(prodID){
+      let edit = {
+        prodID: prodID,
+        prodName: this.prodName,
+        amount: this.amount,
+        Category: this.Category,
+        prodUrl: this.prodUrl
+      }
+      console.log(edit);
+      this.$store.dispatch('getPatch', edit)
+    },
+    closeModal(){
+      this.showModal = false;
+    }
+  },
+  mounted(){
+    this.getProduct
+  },
     components:{
         Spinner
     }
@@ -251,12 +205,20 @@ export default{
   margin-left: 1.5%;
   padding-bottom: 10%;
 }
-
+h1, h5{
+  font-weight: bold;
+}
+.outsideButtons{
+  text-align: justify;
+  width: 40px;
+  margin-left: 89%;
+}
 button{
       background-color: #ffffff;
       color: rgb(0, 0, 0);
       height: 55px;
       border-radius: 10px;
+      text-align: center;
     }
   button:hover{
       transform: scale(1.05);

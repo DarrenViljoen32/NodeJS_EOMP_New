@@ -1,8 +1,9 @@
 <template>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <div class="home">
     <br><br><br>
     <div>
-      <h1>Welcome To The <br> DELUXE CAFÉ</h1>
+      <h1><span id="cursive">Welcome To The</span> <br> DELUXE CAFÉ</h1>
       <br><br><br>
       <p>Deluxe Café is a trendy startup café nestled in the heart of the city, offering a luxurious yet cozy ambiance where patrons can indulge in artisanal coffee, delectable pastries, and gourmet sandwiches. With a focus on quality ingredients sourced locally, the café aims to elevate the traditional café experience by infusing it with modern sophistication.</p>
       <br><br>
@@ -35,7 +36,7 @@ export default {
   padding-right: 5%;
 }
 .home{
-  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url("https://i.postimg.cc/jdrXL6sC/ed621dee-7aba-44ae-b748-ad8701172440vhghj.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url("https://i.postimg.cc/prJDZRvw/mmmmmm08210ab1-6a11-4f04-9789-cf9e413d5958.jpg");
   background-blend-mode: darken;
   background-size: 100%;
   background-repeat: repeat-y;
@@ -49,6 +50,9 @@ export default {
 }
 h1{
   font-size: 52px;
+}
+#cursive{
+  font-family: "Sofia";
 }
 
 @media screen and (max-width:1080px){

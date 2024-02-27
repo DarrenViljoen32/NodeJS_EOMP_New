@@ -16,25 +16,28 @@
           <!-- <p>What sets Deluxe Café apart is its commitment to fostering a sense of community. The space is designed to encourage socializing and connection, with cozy seating areas perfect for catching up with friends or getting lost in a good book. Regular events such as live music nights, poetry readings, and art exhibitions further enrich the café's vibrant atmosphere, ensuring there's always something new to discover.</p>
           <br> -->
           <p>Whether you're seeking a quiet spot to work, a casual meeting place, or simply a place to unwind and recharge, Deluxe Café offers a haven where every visit feels like a luxurious treat for the senses. It's more than just a café; it's a destination where the art of coffee meets the art of living.</p>
-          <br><br> 
+ 
         </div>
         <div class="col-lg-6">
-          <img src="https://i.postimg.cc/YCm4V4KB/06263c1f-093a-47cd-b87e-fdc7a75d5209.jpg" alt="about1">
+          <br><br><br>
+          <img src="https://i.postimg.cc/brxJbXsG/f0fc08ff-113e-475b-a230-92ce946b8d88.jpg" alt="about1">
         </div>
       </div>
-      <br><br><br>
+      <br><br>
       <div class="row">
         <div class="col-lg-6">
+          <br><br><br>
+          <img src="https://i.postimg.cc/85CV12Vd/c19ff7fd-d3c2-4bc0-91d8-e0eb35bcded1.jpg" alt="about2">
           <br><br>
-          <img src="https://i.postimg.cc/YCm4V4KB/06263c1f-093a-47cd-b87e-fdc7a75d5209.jpg" alt="about2">
         </div>
         <div class="col-lg-6">
           <br><br>
           <h3>Our Purpose</h3>
           <p>The purpose of Deluxe Café is to provide more than just a place to grab a cup of coffee; it aims to create a vibrant and welcoming community hub where people can gather, connect, and indulge in high-quality coffee and food offerings. The café strives to elevate the traditional café experience by offering a blend of elegance and comfort, fostering an environment where patrons feel inspired to linger, socialize, work, or simply unwind. Through its carefully curated menu, cozy ambiance, and regular events, Deluxe Café seeks to enrich the lives of its customers by providing a space where they can relax, recharge, and enjoy the finer things in life.</p>
-          <br><br>
+          <br><br><br>
         </div>
       </div>
+      <br><br>
       <div class="row">
         <div class="col-lg-6">
           <br><br>
@@ -52,7 +55,7 @@
           </p>
         </div>
         <div class="col-lg-6">
-          <br><br>
+          <br><br><br>
           <img src="https://i.postimg.cc/YCm4V4KB/06263c1f-093a-47cd-b87e-fdc7a75d5209.jpg" alt="about3">
         </div>
       </div>
@@ -88,6 +91,12 @@ export default{
   margin-right: 1.5%;
   margin-left: 1.5%;
   padding-bottom: 10%;
+}
+img{
+  width: 512px;
+}
+h1{
+  font-weight: bold;
 }
 
 @media screen and (max-width:720px){
